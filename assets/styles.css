@@ -95,3 +95,16 @@
     animation: none !important;
   }
 }
+/* v6.4 | Instagram do Spotted: link externo discreto, sem elementos flutuantes. */
+.instagram-icon{width:16px;height:16px;flex:none;display:block}
+.desktop-nav a.instagram-nav{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #bacbbd;border-radius:5px;color:#305846;font-weight:800}
+.desktop-nav a.instagram-nav:hover{border-color:#6d9369;background:#eaf0e5;color:#183c2a}
+.instagram-external{font-size:13px;font-weight:700;opacity:.7}
+.mobile-nav a.instagram-mobile{display:flex;gap:10px;align-items:center;color:#254d35;font-weight:850}
+.mobile-nav a.instagram-mobile>span:last-child{margin-left:auto}
+@media(min-width:901px) and (max-width:1180px){
+  .desktop-nav{gap:clamp(9px,1.1vw,15px)}
+  .desktop-nav a{font-size:11px}
+  .desktop-nav a.instagram-nav{padding:7px 8px;gap:5px}
+  .desktop-nav a.nav-cta{padding:9px 11px}
+}
