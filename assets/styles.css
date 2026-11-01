@@ -63,3 +63,35 @@
 
 /* Em telas pequenas o botão flutuante cobria perguntas, botões e parágrafos. */
 @media(max-width:680px){.back-top{display:none!important}}
+
+/* v6.3 | Órbitas em movimento: mudança restrita ao diagrama da abertura.
+   O círculo UFRN e as quatro palavras permanecem fixos e legíveis. */
+@keyframes cv-orbita-interna {
+  from { transform: translate(-50%, -50%) rotate(-20deg); }
+  to   { transform: translate(-50%, -50%) rotate(340deg); }
+}
+@keyframes cv-orbita-externa {
+  from { transform: translate(-50%, -50%) rotate(20deg); }
+  to   { transform: translate(-50%, -50%) rotate(-340deg); }
+}
+.orbit-illustration .orbit-one {
+  animation: cv-orbita-interna 29s linear infinite;
+  will-change: transform;
+}
+.orbit-illustration .orbit-two {
+  animation: cv-orbita-externa 41s linear infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-illustration .orbit-one,
+  .orbit-illustration .orbit-two {
+    animation: none !important;
+    will-change: auto;
+  }
+}
+@media print {
+  .orbit-illustration .orbit-one,
+  .orbit-illustration .orbit-two {
+    animation: none !important;
+  }
+}
