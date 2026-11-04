@@ -108,3 +108,42 @@
   .desktop-nav a.instagram-nav{padding:7px 8px;gap:5px}
   .desktop-nav a.nav-cta{padding:9px 11px}
 }
+
+/* v6.5 | Menu Instagram: icon compact and aligned, independent of viewport. */
+.desktop-nav a.instagram-nav {
+  display:inline-flex; align-items:center; gap:6px; padding:0; border:0;
+  border-radius:0; background:transparent; line-height:1.2;
+}
+.desktop-nav a.instagram-nav:hover {background:transparent;color:#162c20;}
+.desktop-nav a.instagram-nav svg.instagram-icon,
+.mobile-nav a.instagram-mobile svg.instagram-icon {
+  display:block; width:16px; height:16px; min-width:16px; max-width:16px;
+  max-height:16px; flex:0 0 16px; vertical-align:middle;
+}
+.mobile-nav a.instagram-mobile {display:flex;align-items:center;gap:10px;}
+
+/* Seção de posicionamentos — identidade visual Cultura Viva na UFRN */
+.respostas{background:#102c25;color:white;position:relative;isolation:isolate;overflow:hidden}
+.respostas::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 4% 10%,rgba(67,122,81,.28),transparent 55%),radial-gradient(ellipse at 100% 80%,rgba(45,92,66,.3),transparent 60%);pointer-events:none}
+.respostas .section-title em{color:#d9f45a}.respostas .section-intro{color:#d0dfd4}
+.respostas-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.15fr);gap:clamp(22px,4vw,64px);align-items:start}
+.resposta-resumo{min-width:0;padding:24px 0}
+.resposta-ordem{display:block;font-size:11px;font-weight:850;letter-spacing:.12em;color:#bed6bd}
+.resposta-asterisco{color:#d9f45a;font-size:76px;line-height:1;margin:19px 0}
+.resposta-etiqueta{display:inline-block;padding:8px 13px;background:#d9f45a;color:#102c25;border-radius:4px;font-size:12px;font-weight:850;letter-spacing:.04em}
+.resposta-resumo h3{font-size:clamp(36px,4.2vw,62px);line-height:1.06;letter-spacing:-.06em;margin:22px 0}
+.resposta-resumo h3 em{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:#d9f45a}
+.resposta-resumo>p{font-size:15px;line-height:1.8;color:#d7e5da}
+.resposta-data{border-top:1px solid #718b77;margin-top:30px;padding-top:19px;display:grid;gap:5px}
+.resposta-data small{font-size:10px;letter-spacing:.12em;color:#c1d4c6;font-weight:800}
+.resposta-data strong{font-size:24px;color:#d9f45a;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.resposta-carta{background:#fffefa;color:#173329;padding:clamp(24px,4.4vw,55px);border-top:7px solid #d9f45a;border-radius:13px;box-shadow:0 27px 55px rgba(0,0,0,.22);min-width:0}
+.resposta-carta-cabecalho{font-size:10px;letter-spacing:.1em;font-weight:850;color:#56715f;border-bottom:1px solid #d4dfd5;padding-bottom:16px}
+.resposta-carta h3{font-size:clamp(21px,2.2vw,28px);line-height:1.35;letter-spacing:-.035em;margin:28px 0 22px}
+.resposta-carta p{font-size:15px;line-height:1.8;margin:0 0 17px;overflow-wrap:break-word}
+.resposta-carta p strong{color:#245b3f}
+.resposta-carta .resposta-assinatura{font-weight:800;margin-top:26px}
+.resposta-carta-rodape{border-top:1px solid #dce4db;padding-top:16px;margin-top:28px;color:#607567;font-size:12px}
+.respostas-nota{font-size:13px;color:#cbdccc;line-height:1.7;border-left:3px solid #d9f45a;padding-left:18px;margin:36px 0 0;max-width:800px}
+@media(max-width:900px){.respostas-grid{grid-template-columns:1fr}.resposta-resumo{padding:0}.resposta-carta{max-width:850px}}
+@media(max-width:680px){.resposta-carta{padding:25px 20px}.resposta-resumo h3{font-size:40px}.resposta-carta p{font-size:14px}.resposta-data strong{font-size:21px}}
